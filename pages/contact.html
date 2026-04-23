@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Schy's Portfolio</title>
+  <meta name="description" content="Get in touch with Schy — open to collaborations, opportunities, and interesting conversations." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+<body>
+
+<div id="cursor-orb"></div>
+<div id="cursor-trail"></div>
+<div id="page-transition"></div>
+<div id="starfield"></div>
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav>
+    <a href="../index.html" class="nav-logo nav-logo-img" aria-label="schy.dev — home" data-cursor="hover">
+    <span class="logo-placeholder" aria-hidden="true">
+      <span class="logo-ph-box">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect width="22" height="22" rx="6" fill="currentColor" opacity="0.15"/><path d="M6 11h10M11 6l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <img src="../assets/logo.png" alt="Schy logo" class="logo-img">
+      </span>
+      <span class="logo-ph-text">schy<span class="logo-dot">.</span>dev</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="certificates.html">Certificates</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button id="theme-toggle" data-cursor="hover" aria-label="Toggle theme">☀️</button>
+    <button id="nav-toggle"   data-cursor="hover" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label reveal">Let's connect</span>
+      <h1 class="reveal" data-delay="1">Get in Touch</h1>
+      <p class="reveal" data-delay="2">Open to collaborations, freelance work, and conversations about building things that matter.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Info + socials -->
+        <div class="contact-info">
+
+          <div class="contact-item reveal">
+            <div class="contact-item-icon">📧</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">
+                <a href="mailto:hello@schy.dev" data-cursor="hover">schyllepalmero@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item reveal" data-delay="1">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">Naga City, Philippines</div>
+            </div>
+          </div>
+
+          <div class="contact-item reveal" data-delay="2">
+            <div class="contact-item-icon">⏰</div>
+            <div>
+              <div class="contact-item-label">Response time</div>
+              <div class="contact-item-value">Usually within 24–48 hours</div>
+            </div>
+          </div>
+
+          <div class="contact-item reveal" data-delay="3">
+            <div class="contact-item-icon">✅</div>
+            <div>
+              <div class="contact-item-label">Status</div>
+              <div class="contact-item-value">
+                <span class="pill" style="font-size:0.78rem;padding:4px 12px">
+                  <span class="dot"></span>Available for opportunities
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials reveal" data-delay="4">
+            <h4>Find me on</h4>
+            <div class="socials-row">
+              <!-- 📌 Replace href="#" with your real profile URLs -->
+              <a href="#" class="social-btn social-btn-icon" data-cursor="hover" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener"></a>
+              <a href="#" class="social-btn social-btn-icon" data-cursor="hover" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener"></a>
+              <a href="#" class="social-btn social-btn-icon" data-cursor="hover" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener"></a>
+              <a href="#" class="social-btn social-btn-icon" data-cursor="hover" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener"></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form-wrap glass reveal" data-delay="1">
+          <h2 class="form-title">Send a message</h2>
+          <p class="form-subtitle">Fill in the form and I'll get back to you as soon as possible.</p>
+          <form id="contact-form"
+                novalidate
+                data-action="https://formspree.io/f/xyklblyr">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name <span style="color:var(--accent)">*</span></label>
+                <input type="text"  id="name"  name="name"  placeholder="Your full name"    required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span style="color:var(--accent)">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com"   required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+
+            <div class="form-group">
+              <label for="message" style="display:flex;justify-content:space-between;align-items:center">
+                <span>Message <span style="color:var(--accent)">*</span></span>
+                <span id="char-count" style="font-size:0.72rem;color:var(--fg-muted);font-weight:400">0 / 1000</span>
+              </label>
+              <textarea id="message" name="message"
+                        placeholder="Tell me about your project, idea, or just say hi…"
+                        rows="5" required maxlength="1000"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit" data-cursor="hover">
+              Send Message
+              <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0-5.25-5.25M19.5 12l-5.25 5.25"/>
+              </svg>
+            </button>
+
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Schy. Learn. Build. Improve.</span>
+    <div class="footer-socials">
+      <a href="#" data-cursor="hover" aria-label="GitHub"   target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="WhatsApp"  target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="Instagram" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/global.js"></script>
+<script src="../js/social-icons.js"></script>
+<script src="../js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schy — Portfolio · Design & Code</title>
+  <meta name="description" content="Hi, I'm Schy — I build at the edge of design and code. UX/UI, Cybersecurity, Data Science, Web Development." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+</head>
+<body>
+
+<!-- ── CUSTOM CURSOR ─────────────────────────────────────────────────── -->
+<div id="cursor-orb"></div>
+<div id="cursor-trail"></div>
+
+<!-- ── PAGE TRANSITION ───────────────────────────────────────────────── -->
+<div id="page-transition"></div>
+
+<!-- ── AMBIENT ───────────────────────────────────────────────────────── -->
+<div id="starfield"></div>
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- INTRO SCREEN — only shown on first load or when logo is clicked    -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="intro-screen" aria-hidden="false" role="dialog" aria-label="Portfolio intro">
+
+  <button id="skip-intro" data-cursor="hover">Skip intro →</button>
+
+  <div class="laptop-wrap" id="laptop" data-cursor="hover" tabindex="0" role="button" aria-label="Click to enter portfolio">
+
+    <div class="laptop-body">
+      <div class="laptop-screen-wrap">
+        <div class="screen-sweep"></div>
+        <div class="laptop-screen">
+          <div class="mini-browser">
+            <div class="mini-chrome">
+              <div class="chrome-dots">
+                <div class="chrome-dot red"></div>
+                <div class="chrome-dot yel"></div>
+                <div class="chrome-dot grn"></div>
+              </div>
+              <div class="chrome-url">schy.portfolio.dev</div>
+            </div>
+            <div class="mini-content">
+              <div class="mini-name">Hi, I'm <span>Schy</span> ✦</div>
+              <div class="mini-nav-pills">
+                <div class="mini-pill">Work</div>
+                <div class="mini-pill">About</div>
+                <div class="mini-pill">Contact</div>
+              </div>
+              <button class="mini-enter-btn">▸ Enter site</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="laptop-base"></div>
+    <div class="laptop-stand"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- NAV                                                                 -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<nav>
+  <!-- Logo — click triggers intro. Brand logo with image. -->
+  <a href="index.html" class="nav-logo nav-logo-img" id="nav-logo-btn" aria-label="schy.dev — home" data-cursor="hover">
+    <span class="logo-placeholder" aria-hidden="true">
+      <span class="logo-ph-box">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect width="22" height="22" rx="6" fill="currentColor" opacity="0.15"/><path d="M6 11h10M11 6l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <img src="assets/logo.png" alt="Schy logo" class="logo-img">
+      </span>
+      <span class="logo-ph-text">schy<span class="logo-dot">.</span>dev</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <!-- "Home" goes directly to home content, NOT through intro -->
+    <li><a href="index.html" data-home-link>Home</a></li>
+    <li><a href="pages/projects.html">Projects</a></li>
+    <li><a href="pages/about.html">About</a></li>
+    <li><a href="pages/certificates.html">Certificates</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button id="theme-toggle" data-cursor="hover" aria-label="Toggle theme">☀️</button>
+    <button id="nav-toggle"   data-cursor="hover" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- HOME PAGE                                                           -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="home-page" class="page">
+
+  <!-- ── HERO ─────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-video-wrap">
+      <video id="hero-video" autoplay loop muted playsinline>
+        <!-- Add your video: <source src="assets/hero-bg.mp4" type="video/mp4"> -->
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-pill reveal">
+            <span class="pill"><span class="dot"></span>Available for opportunities · 2026</span>
+          </div>
+
+          <h1 class="hero-title reveal" data-delay="1">
+            Hi, I'm Schy.<br>I build at the edge<br>of design &amp; code.
+          </h1>
+
+          <p class="hero-sub reveal" data-delay="2">
+            I design what users love, build what businesses need,<br>
+            and secure what matters most.
+          </p>
+
+          <div class="hero-ctas reveal" data-delay="3">
+            <a href="pages/projects.html" class="btn btn-primary" data-cursor="hover">See my work ↗</a>
+            <a href="pages/contact.html"  class="btn btn-glass"   data-cursor="hover">Get in touch</a>
+          </div>
+
+          <div class="hero-stats reveal" data-delay="4">
+            <div class="hero-stat">
+              <div class="hero-stat-n">8+</div>
+              <div class="hero-stat-l">Ideas Executed</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-n">5×</div>
+              <div class="hero-stat-l">Paths Explored</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-n">∞</div>
+              <div class="hero-stat-l">Curiosity</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" data-delay="2">
+          <canvas id="constellation-canvas" aria-label="Interactive tech constellation"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ───────────────────────────────────────────────────── -->
+  <div class="marquee-wrap reveal">
+    <div class="marquee-track" aria-hidden="true">
+      <!-- Set 1 — real brand logos via Simple Icons CDN colors + SVG paths -->
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"> Figma</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="React"> React</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="Python"> Python</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://img.itch.zone/aW1nLzIwNzMzMjkucG5n/original/GfpM24.png" alt="C#"> C#</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"> JavaScript</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5"> HTML5</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/css/1572B6" alt="CSS3"> CSS3</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/git/F05032" alt="Git"> Git</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"> GitHub</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"> MySQL</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"> MongoDB</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind"> Tailwind CSS</div>
+      <!-- Set 2 — duplicate for seamless loop -->
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"> Figma</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="React"> React</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="Python"> Python</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://img.itch.zone/aW1nLzIwNzMzMjkucG5n/original/GfpM24.png" alt="C#"> C#</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"> JavaScript</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5"> HTML5</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/css/1572B6" alt="CSS3"> CSS3</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/git/F05032" alt="Git"> Git</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"> GitHub</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"> MySQL</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"> MongoDB</div>
+      <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind"> Tailwind CSS</div>
+    </div>
+  </div>
+
+  <!-- ── FOUR CRAFTS ───────────────────────────────────────────────── -->
+  <section>
+    <div class="container">
+      <span class="section-label reveal">What I do</span>
+      <h2 class="section-title reveal" data-delay="1">Four crafts, one vision</h2>
+      <p class="section-subtitle reveal" data-delay="2">I operate at the intersection of aesthetics, security, intelligence, and engineering.</p>
+
+      <div class="crafts-grid">
+        <div class="craft-card glass tilt-card reveal" data-delay="1">
+          <span class="craft-icon">🎨</span>
+          <h3 class="craft-title">UX / UI Design</h3>
+          <p class="craft-desc">I turn ideas into intuitive, human-centered interfaces that feel as good as they look. From wireframes to polished prototypes in Figma.</p>
+          <div class="craft-glow"></div>
+        </div>
+        <div class="craft-card glass tilt-card reveal" data-delay="2">
+          <span class="craft-icon">🔐</span>
+          <h3 class="craft-title">Cybersecurity</h3>
+          <p class="craft-desc">Understanding threats, securing systems, and thinking like an attacker to build safer digital environments.</p>
+          <div class="craft-glow"></div>
+        </div>
+        <div class="craft-card glass tilt-card reveal" data-delay="3">
+          <span class="craft-icon">🤖</span>
+          <h3 class="craft-title">Data Science &amp; AI</h3>
+          <p class="craft-desc">Turning raw data into meaningful insights. Building predictive models and exploring the frontier of machine intelligence.</p>
+          <div class="craft-glow"></div>
+        </div>
+        <div class="craft-card glass tilt-card reveal" data-delay="4">
+          <span class="craft-icon">💻</span>
+          <h3 class="craft-title">Web Development</h3>
+          <p class="craft-desc">Engineering fast, accessible, and visually exceptional web experiences from concept to deployment.</p>
+          <div class="craft-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED PROJECTS STRIP ───────────────────────────────────── -->
+  <section>
+    <div class="container">
+      <span class="section-label reveal">Selected Work</span>
+      <h2 class="section-title reveal" data-delay="1">Things I've built</h2>
+      <div class="featured-strip">
+        <div class="featured-card glass reveal" data-delay="1">
+          <div class="featured-num">🛒</div>
+          <div class="featured-body">
+            <div class="tag" style="margin-bottom:12px">Capstone · UI/UX</div>
+            <h3>PalengkeGo</h3>
+            <p>Mobile app reimagining the Filipino wet market — on-demand delivery from local vendors. Full Figma prototype in progress.</p>
+          </div>
+          <a href="pages/projects.html" class="featured-arrow" data-cursor="hover" aria-label="View PalengkeGo">↗</a>
+        </div>
+        <div class="featured-card glass reveal" data-delay="2">
+          <div class="featured-num">📈</div>
+          <div class="featured-body">
+            <div class="tag" style="margin-bottom:12px">Web · Dashboard</div>
+            <h3>PayDaily</h3>
+            <p>POS and financial recording dashboard for store managers — sales tracking, revenue trends, and inventory in one place.</p>
+          </div>
+          <a href="pages/projects.html" class="featured-arrow" data-cursor="hover" aria-label="View PayDaily">↗</a>
+        </div>
+        <div class="featured-card glass reveal" data-delay="3">
+          <div class="featured-num">🏠</div>
+          <div class="featured-body">
+            <div class="tag" style="margin-bottom:12px">Design · UX/UI</div>
+            <h3>DormDash</h3>
+            <p>A mobile app that helps find boarding houses and book essential services in one place — user research, branding, and full Figma prototype.</p>
+          </div>
+          <a href="pages/projects.html" class="featured-arrow" data-cursor="hover" aria-label="View DormDash">↗</a>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px" class="reveal" data-delay="4">
+        <a href="pages/projects.html" class="btn btn-glass" data-cursor="hover">View all projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESS CAROUSEL ──────────────────────────────────────────── -->
+  <section class="process-section">
+    <div class="container">
+      <span class="section-label reveal">How I work</span>
+      <h2 class="section-title reveal" data-delay="1">Process, by chapter</h2>
+
+      <div class="process-carousel reveal" data-delay="2">
+        <div class="process-track">
+          <div class="process-card glass">
+            <div class="process-num">01</div>
+            <h3 class="process-title">Discover</h3>
+            <p class="process-desc"> Understanding the problem, the people, and the goal that guides every decision after. </p>
+          </div>
+          <div class="process-card glass">
+            <div class="process-num">02</div>
+            <h3 class="process-title">Define</h3>
+            <p class="process-desc">Synthesising research into a clear problem statement, personas, and user journeys that ground every decision.</p>
+          </div>
+          <div class="process-card glass">
+            <div class="process-num">03</div>
+            <h3 class="process-title">Ideate</h3>
+            <p class="process-desc">Generating ideas fast—sketching, mapping, and pushing every possibility.</p>
+          </div>
+          <div class="process-card glass">
+            <div class="process-num">04</div>
+            <h3 class="process-title">Prototype</h3>
+            <p class="process-desc">Translating the best ideas into low-to-high fidelity prototypes, ready for real feedback from real people.</p>
+          </div>
+          <div class="process-card glass">
+            <div class="process-num">05</div>
+            <h3 class="process-title">Build</h3>
+            <p class="process-desc">Writing clean, semantic, performant code that brings the design to life — pixel-perfect and production-ready.</p>
+          </div>
+          <div class="process-card glass">
+            <div class="process-num">06</div>
+            <h3 class="process-title">Iterate</h3>
+            <p class="process-desc">Hypothesize. Build. Validate. Optimize. The loop never ends — and neither does the improvement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-controls reveal" data-delay="3">
+        <button class="process-btn prev" data-cursor="hover" aria-label="Previous">←</button>
+        <button class="process-btn next" data-cursor="hover" aria-label="Next">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIAL / QUOTE ────────────────────────────────────────── -->
+  <section>
+    <div class="container">
+      <div class="quote-block glass reveal">
+        <div class="quote-mark">"</div>
+        <blockquote>
+          What I make today<br>teaches me what I'll make tomorrow.
+        </blockquote>
+        <cite>— Schy</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ A. SKILL RADAR CHART ════════════════════════════════════════ -->
+  <section class="radar-section">
+    <div class="container">
+      <span class="section-label reveal">Skill Overview</span>
+      <h2 class="section-title reveal" data-delay="1">Strengths at a glance</h2>
+      <p class="section-subtitle reveal" data-delay="2">5 dimensions. 1 goal. Constant growth.</p>
+
+      <div class="radar-wrap">
+        <div class="radar-canvas-wrap reveal" data-delay="1">
+          <canvas id="radar-canvas" aria-label="Skill radar chart"></canvas>
+        </div>
+        <div class="radar-legend reveal" data-delay="2">
+          <div class="radar-legend-item">
+            <span class="radar-dot" style="background:#a259ff"></span>
+            <span class="radar-legend-label">Design &amp; Creative</span>
+            <span class="radar-legend-pct">88%</span>
+          </div>
+          <div class="radar-legend-item">
+            <span class="radar-dot" style="background:#5bc8ff"></span>
+            <span class="radar-legend-label">Development</span>
+            <span class="radar-legend-pct">82%</span>
+          </div>
+          <div class="radar-legend-item">
+            <span class="radar-dot" style="background:#ff6b9d"></span>
+            <span class="radar-legend-label">Cybersecurity</span>
+            <span class="radar-legend-pct">37%</span>
+          </div>
+          <div class="radar-legend-item">
+            <span class="radar-dot" style="background:#f7df1e"></span>
+            <span class="radar-legend-label">Data Science &amp; AI</span>
+            <span class="radar-legend-pct">50%</span>
+          </div>
+          <div class="radar-legend-item">
+            <span class="radar-dot" style="background:#28c841"></span>
+            <span class="radar-legend-label">Enterprise &amp; Tools</span>
+            <span class="radar-legend-pct">70%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ B. NOW LEARNING (floating card — always visible on home) ════ -->
+  <!-- Floating card injected below, outside the flow -->
+
+  <!-- ══ C. TERMINAL / CTF WINDOW — Parrot OS style ══════════════════ -->
+  <section class="terminal-section">
+    <div class="container">
+      <span class="section-label reveal">Security Lab</span>
+      <h2 class="section-title reveal" data-delay="1">Life in the terminal</h2>
+      <p class="section-subtitle reveal" data-delay="2">A glimpse into what learning ethical hacking looks like — recon, enumeration, and finding the flag on Parrot OS.</p>
+
+      <div class="terminal-wrap reveal" data-delay="2">
+        <div class="terminal-bar parrot-bar">
+          <div class="terminal-dots">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+          </div>
+          <div class="terminal-title parrot-title">
+            <span class="parrot-icon">🦜</span> schy@parrot — <span style="color:#7ec8e3">~/lab/ctf-practice</span> — bash
+          </div>
+        </div>
+        <div class="terminal-body parrot-body">
+          <span class="t-line typed"><span class="t-parrot-user">┌─[schy㉿parrot]─[~/lab/ctf-practice]</span></span>
+          <span class="t-line typed"><span class="t-parrot-arrow">└──╼</span> <span class="t-cmd">nmap -sV -sC -T4 -oN recon.txt 10.10.10.55</span></span>
+          <span class="t-blank typed"></span>
+          <span class="t-line typed"><span class="t-out">Starting Nmap 7.94SVN — https://nmap.org</span></span>
+          <span class="t-line typed"><span class="t-out">Nmap scan report for 10.10.10.55  Host is up (0.041s latency)</span></span>
+          <span class="t-blank typed"></span>
+          <span class="t-line typed"><span class="t-out">PORT     STATE  SERVICE   VERSION</span></span>
+          <span class="t-line typed"><span class="t-success">22/tcp   open   ssh       OpenSSH 8.2p1 Ubuntu</span></span>
+          <span class="t-line typed"><span class="t-success">80/tcp   open   http      Apache httpd 2.4.41</span></span>
+          <span class="t-line typed"><span class="t-warn">8080/tcp open   http-proxy Werkzeug/2.0.0 Python/3.8.10</span></span>
+          <span class="t-blank typed"></span>
+          <span class="t-line typed"><span class="t-parrot-user">┌─[schy㉿parrot]─[~/lab/ctf-practice]</span></span>
+          <span class="t-line typed"><span class="t-parrot-arrow">└──╼</span> <span class="t-cmd">gobuster dir -u http://10.10.10.55 -w /usr/share/wordlists/dirb/common.txt -x php,html</span></span>
+          <span class="t-line typed"><span class="t-success">/login.php     (Status: 200) [Size: 1892]</span></span>
+          <span class="t-line typed"><span class="t-success">/admin         (Status: 301) [Size: 308]</span></span>
+          <span class="t-line typed"><span class="t-warn">/backup.zip    (Status: 200) [Size: 48201]  &lt;-- credentials inside!</span></span>
+          <span class="t-blank typed"></span>
+          <span class="t-line typed"><span class="t-parrot-user">┌─[schy㉿parrot]─[~/lab/ctf-practice]</span></span>
+          <span class="t-line typed"><span class="t-parrot-arrow">└──╼</span> <span class="t-cmd">cat user.txt</span></span>
+          <span class="t-line typed"><span class="t-flag">EC{f00tpr1nt1ng_1s_th3_f1rst_st3p_t0_pwn1ng} 🎉</span></span>
+          <span class="t-blank typed"></span>
+          <span class="t-line typed"><span class="t-dim"># EC-Council CEH — Module 3: Scanning Networks</span></span>
+          <span class="t-line"><span class="t-parrot-user">┌─[schy㉿parrot]─[~/lab/ctf-practice]</span></span>
+          <span class="t-line"><span class="t-parrot-arrow">└──╼</span> <span class="t-cursor"></span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ D. CURRENT TOOLS WIDGET ══════════════════════════════════════ -->
+  <section class="tools-ticker-section">
+    <div class="container">
+      <div class="tools-ticker-inner">
+        <div class="reveal">
+          <span class="section-label">My Stack</span>
+          <h2 class="section-title" style="margin-bottom:16px">Some of what I'm <em>using right now</em></h2>
+          <p style="color:var(--fg-muted);font-size:0.95rem;line-height:1.7;max-width:380px">
+            Today's  recent toolkit. Ask me about the rest.
+          </p>
+        </div>
+        <div class="tools-ticker-grid reveal" data-delay="1">
+          <!-- Top 4 active tools with real logos -->
+          <div class="tool-chip active-tool" data-cursor="hover" title="Figma">
+            <div class="tool-active-dot"></div>
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">Figma</span>
+          </div>
+          <div class="tool-chip active-tool" data-cursor="hover" title="C#">
+            <div class="tool-active-dot"></div>
+            <span class="tool-chip-icon"><img src="https://img.itch.zone/aW1nLzIwNzMzMjkucG5n/original/GfpM24.png" alt="C#" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">C#</span>
+          </div>
+          <div class="tool-chip active-tool" data-cursor="hover" title="SAP">
+            <div class="tool-active-dot"></div>
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/sap/0FAAFF" alt="SAP" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">SAP</span>
+          </div>
+          <div class="tool-chip active-tool" data-cursor="hover" title="VS Code">
+            <div class="tool-active-dot"></div>
+            <span class="tool-chip-icon"><img src="https://icons.veryicon.com/png/o/business/vscode-program-item-icon/vscode.png" alt="VS Code" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">VS Code</span>
+          </div>
+          <!-- Other tools -->
+          <div class="tool-chip" data-cursor="hover" title="Python">
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">Python</span>
+          </div>
+          <div class="tool-chip" data-cursor="hover" title="React">
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">React</span>
+          </div>
+          <div class="tool-chip" data-cursor="hover" title="MySQL">
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">MySQL</span>
+          </div>
+          <div class="tool-chip" data-cursor="hover" title="Git">
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">Git</span>
+          </div>
+          <div class="tool-chip" data-cursor="hover" title="MongoDB">
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">MongoDB</span>
+          </div>
+          <div class="tool-chip" data-cursor="hover" title="Java">
+            <span class="tool-chip-icon"><img src="https://static.vecteezy.com/system/resources/previews/022/100/214/original/java-logo-transparent-free-png.png" alt="Java" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">Java</span>
+          </div>
+          <div class="tool-chip" data-cursor="hover" title="Parrot OS">
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/parrotsecurity/15E0ED" alt="Parrot OS" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">Parrot OS</span>
+          </div>
+          <div class="tool-chip" data-cursor="hover" title="GitHub">
+            <span class="tool-chip-icon"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" style="width:28px;height:28px;object-fit:contain"></span>
+            <span class="tool-chip-name">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ F. PLAYGROUND — replaced with skills showcase cards ══════════ -->
+  <section class="playground-section">
+    <div class="container">
+      <span class="section-label reveal">My Disciplines</span>
+      <h2 class="section-title reveal" data-delay="1">What I Create</h2>
+      <p class="section-subtitle reveal" data-delay="2">A glimpse into the kind of work I love doing — design-forward, security-aware, data-driven.</p>
+
+      <div class="playground-grid">
+
+        <!-- Card 1: UI/UX Design preview -->
+        <div class="play-card glass reveal" data-delay="1">
+          <div class="play-card-canvas" style="background: linear-gradient(135deg, oklch(0.08 0.03 270), oklch(0.12 0.04 250)); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; padding:24px;">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:200px">
+              <div style="background:oklch(0.68 0.18 230/0.3);border:1px solid oklch(0.68 0.18 230/0.5);border-radius:8px;padding:8px 14px;font-size:0.7rem;color:var(--accent);font-weight:600">Hero Section</div>
+              <div style="background:oklch(0.55 0.20 250/0.2);border:1px solid oklch(0.55 0.20 250/0.4);border-radius:8px;padding:8px 14px;font-size:0.7rem;color:var(--primary);font-weight:600">Navigation</div>
+              <div style="background:oklch(0.68 0.18 230/0.3);border:1px solid oklch(0.68 0.18 230/0.5);border-radius:8px;padding:8px 14px;font-size:0.7rem;color:var(--accent);font-weight:600">Card Grid</div>
+              <div style="background:oklch(0.55 0.20 250/0.2);border:1px solid oklch(0.55 0.20 250/0.4);border-radius:8px;padding:8px 14px;font-size:0.7rem;color:var(--primary);font-weight:600">CTA Button</div>
+            </div>
+            <div style="font-size:2rem;margin-top:4px">🎨</div>
+          </div>
+          <div class="play-card-footer">
+            <div class="play-card-title">UI / UX Design</div>
+            <div class="play-card-desc">Figma prototypes · user flows · component systems · visual design</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Data / Code snippet -->
+        <div class="play-card glass reveal" data-delay="2">
+          <div class="play-card-canvas" style="background:#0d1117; font-family:'Courier New',monospace; font-size:0.72rem; line-height:1.7; padding:20px; overflow:hidden; align-items:flex-start; justify-content:flex-start;">
+            <div style="color:#8b949e"># DataWeave · ML pipeline</div>
+            <div><span style="color:#ff7b72">import</span> <span style="color:#e6edf3">pandas</span> <span style="color:#ff7b72">as</span> <span style="color:#e6edf3">pd</span></div>
+            <div><span style="color:#ff7b72">from</span> <span style="color:#e6edf3">sklearn.ensemble</span> <span style="color:#ff7b72">import</span> <span style="color:#79c0ff">RandomForestClassifier</span></div>
+            <div style="color:#8b949e">&nbsp;</div>
+            <div><span style="color:#79c0ff">df</span> <span style="color:#ff7b72">=</span> pd.<span style="color:#d2a8ff">read_csv</span>(<span style="color:#a5d6ff">'sales_data.csv'</span>)</div>
+            <div><span style="color:#79c0ff">model</span> <span style="color:#ff7b72">=</span> RandomForestClassifier(</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#e6edf3">n_estimators</span><span style="color:#ff7b72">=</span><span style="color:#79c0ff">100</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#e6edf3">random_state</span><span style="color:#ff7b72">=</span><span style="color:#79c0ff">42</span></div>
+            <div>)</div>
+            <div><span style="color:#79c0ff">model</span>.<span style="color:#d2a8ff">fit</span>(<span style="color:#e6edf3">X_train, y_train</span>)</div>
+            <div style="color:#3fb950">✓ accuracy: 94.2%</div>
+          </div>
+          <div class="play-card-footer">
+            <div class="play-card-title">Data Science &amp; AI</div>
+            <div class="play-card-desc">Python · pandas · scikit-learn · ML pipelines · data visualization</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Security / CTF badge wall -->
+        <div class="play-card glass reveal" data-delay="3">
+          <div class="play-card-canvas" style="background: linear-gradient(135deg, oklch(0.06 0.02 250), oklch(0.10 0.04 270)); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:24px;">
+            <div style="font-size:2.5rem">🔐</div>
+            <div style="display:flex;flex-direction:column;gap:6px;width:100%">
+              <div style="display:flex;align-items:center;gap:8px;background:oklch(1 0 0/0.04);border:1px solid oklch(0.28 0.06 250/0.5);border-radius:8px;padding:7px 12px;">
+                <span style="width:8px;height:8px;border-radius:50%;background:#28c841;box-shadow:0 0 6px #28c841;flex-shrink:0"></span>
+                <span style="font-size:0.72rem;color:var(--fg-muted)">Module 1 — Intro to Ethical Hacking</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:oklch(1 0 0/0.04);border:1px solid oklch(0.28 0.06 250/0.5);border-radius:8px;padding:7px 12px;">
+                <span style="width:8px;height:8px;border-radius:50%;background:#28c841;box-shadow:0 0 6px #28c841;flex-shrink:0"></span>
+                <span style="font-size:0.72rem;color:var(--fg-muted)">Module 2 — Footprinting &amp; Recon</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:oklch(1 0 0/0.04);border:1px solid oklch(0.28 0.06 250/0.5);border-radius:8px;padding:7px 12px;">
+                <span style="width:8px;height:8px;border-radius:50%;background:#f7df1e;box-shadow:0 0 6px #f7df1e;flex-shrink:0"></span>
+                <span style="font-size:0.72rem;color:var(--fg-muted)">Module 3 — Scanning Networks <em>(active)</em></span>
+              </div>
+            </div>
+          </div>
+          <div class="play-card-footer">
+            <div class="play-card-title">EC-Council CEH Progress</div>
+            <div class="play-card-desc">Ethical hacking · network security · penetration testing on Parrot OS</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA BAND ══════════════════════════════════════════════════════ -->
+  <section class="cta-band">
+    <div class="cta-orb cta-orb-1" data-speed="0.2"></div>
+    <div class="cta-orb cta-orb-2" data-speed="-0.15"></div>
+    <div class="container">
+      <span class="section-label reveal">Let's collaborate</span>
+      <h2 class="reveal" data-delay="1">Have an idea worth building?</h2>
+      <p class="reveal" data-delay="2">Product, prototype, or pure imagination — let's make it real.</p>
+      <a href="pages/contact.html" class="btn btn-primary reveal" data-delay="3" data-cursor="hover">Start a conversation →</a>
+    </div>
+  </section>
+
+</div><!-- /home-page -->
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Schy. Learn. Build. Improve.</span>
+    <div class="footer-socials">
+      <!-- SVG icons injected by social-icons.js based on aria-label -->
+      <a href="#" data-cursor="hover" aria-label="GitHub"   target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="WhatsApp"  target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="Instagram" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ B. NOW LEARNING — floating card ════════════════════════════════ -->
+<div class="now-learning-card glass" id="now-learning-card" aria-label="Currently learning">
+  <div class="now-learning-header">
+    <span class="now-learning-label">Now Learning</span>
+    <button class="now-learning-close" id="nl-close" aria-label="Dismiss">✕</button>
+  </div>
+  <div class="now-learning-items">
+    <div class="now-learning-item">
+      <div class="nli-icon">🔐</div>
+      <div class="nli-text">
+        <div class="nli-name">EC-Council CEH</div>
+        <div class="nli-sub">Ethical Hacking · Module 4</div>
+      </div>
+    </div>
+    <div class="now-learning-item">
+      <div class="nli-icon">🛒</div>
+      <div class="nli-text">
+        <div class="nli-name">PalengkeGo</div>
+        <div class="nli-sub">Capstone UI design · Active</div>
+      </div>
+    </div>
+    <div class="now-learning-item">
+      <div class="nli-icon">⚛️</div>
+      <div class="nli-text">
+        <div class="nli-name">React Advanced</div>
+        <div class="nli-sub">Hooks, Context &amp; Routing</div>
+      </div>
+    </div>
+  </div>
+  <div class="now-learning-footer">Updated April 2026 · Always growing 🌱</div>
+</div>
+<button id="now-learning-show" aria-label="Show what I'm learning">🌱</button>
+
+<script src="js/global.js"></script>
+<script src="js/social-icons.js"></script>
+<script src="js/home.js"></script>
+<script src="js/enhancements.js"></script>
+</body>
+</html>

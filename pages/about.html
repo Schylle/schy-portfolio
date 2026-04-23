@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Schy's Portfolio</title>
+  <meta name="description" content="Learn about Schy — a multi-disciplinary creator at the intersection of design, code, security, and data science." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/enhancements.css" />
+</head>
+<body>
+
+<div id="cursor-orb"></div>
+<div id="cursor-trail"></div>
+<div id="page-transition"></div>
+<div id="starfield"></div>
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav>
+  <a href="../index.html" class="nav-logo nav-logo-img" aria-label="schy.dev — home" data-cursor="hover">
+    <span class="logo-placeholder" aria-hidden="true">
+      <span class="logo-ph-box">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect width="22" height="22" rx="6" fill="currentColor" opacity="0.15"/><path d="M6 11h10M11 6l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <img src="../assets/logo.png" alt="Schy logo" class="logo-img">
+      </span>
+      <span class="logo-ph-text">schy<span class="logo-dot">.</span>dev</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="certificates.html">Certificates</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button id="theme-toggle" data-cursor="hover" aria-label="Toggle theme">☀️</button>
+    <button id="nav-toggle"   data-cursor="hover" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label reveal">Who I am</span>
+      <h1 class="reveal" data-delay="1">About Me</h1>
+      <p class="reveal" data-delay="2">A bit about the person behind the pixels and the code.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- LEFT -->
+        <div class="about-left">
+          <div class="identity-badge glass reveal">
+            <div class="identity-avatar" aria-label="Profile photo placeholder">
+              <!--
+                📌 Replace with your photo:
+                <img src="../assets/avatar.jpg" alt="Shy's photo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+              -->
+              <span aria-hidden="true" style="font-size:2.5rem">👤</span>
+            </div>
+            <div class="identity-name">Schy</div>
+            <div class="identity-role">Designer · Developer · Defender</div>
+            <div class="identity-tags">
+              <span class="tag">UX/UI</span>
+              <span class="tag">Web Dev</span>
+              <span class="tag">Cybersec</span>
+              <span class="tag">Data Science</span>
+            </div>
+          </div>
+
+          <div class="about-facts glass reveal" data-delay="1">
+            <div class="about-fact"><span class="about-fact-icon">📍</span><span>Philippines · Remote OK</span></div>
+            <div class="about-fact"><span class="about-fact-icon">🎓</span><span>B.S. Information Technology</span></div>
+            <div class="about-fact"><span class="about-fact-icon">🔐</span><span>EC-Council Ethical Hacking (in progress)</span></div>
+            <div class="about-fact"><span class="about-fact-icon">💬</span><span>English · Filipino</span></div>
+            <div class="about-fact">
+              <span class="about-fact-icon">✅</span>
+              <span class="pill" style="padding:3px 10px;font-size:0.75rem"><span class="dot"></span>Available 2026</span>
+            </div>
+          </div>
+
+          <a href="../assets/resume.pdf" class="about-resume-btn glass reveal" data-delay="2" data-cursor="hover" download>
+            <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+            Download Resume (PDF)
+          </a>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="about-right">
+
+          <div class="about-story reveal">
+            <p>Hey — I'm <strong>Schy</strong>, a multi-disciplinary creator who lives in the space between making things beautiful and making them work. I'm currently pursuing my studies with a focus on <strong>Information Technology</strong>, while actively training in <strong>Ethical Hacking through EC-Council</strong> — because understanding how systems break is how you build ones that don't.</p>
+            <p>I believe the best digital products are the ones that feel inevitable — where every interaction is smooth, every pixel earns its place, and the underlying system is solid enough to trust. That's what I'm constantly building toward.</p>
+            <p>When I'm not prototyping in Figma or writing code, you'll find me diving into penetration testing labs, exploring enterprise tools like SAP, or obsessing over why a certain typeface feels <em>right</em> in a layout.</p>
+            <p>I love working on things that matter — products that solve real problems for real people, with craft and intention at every layer.</p>
+          </div>
+
+          <!-- ── SKILLS ─────────────────────────────────────────────── -->
+          <div class="skills-wrap reveal" data-delay="1">
+            <h3>Skills &amp; Tools</h3>
+
+            <!-- DESIGN -->
+            <div class="skills-group">
+              <div class="skills-group-label">Design &amp; Creative</div>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar"><span class="skill-bar-label">Figma</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.92"></div></div><span class="skill-pct">92%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">UX Research</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.80"></div></div><span class="skill-pct">80%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Prototyping</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.88"></div></div><span class="skill-pct">88%</span></div>
+              </div>
+            </div>
+
+            <!-- DEVELOPMENT -->
+            <div class="skills-group">
+              <div class="skills-group-label">Development</div>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar"><span class="skill-bar-label">HTML/CSS/JS</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.90"></div></div><span class="skill-pct">90%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">React</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.75"></div></div><span class="skill-pct">75%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Python</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.82"></div></div><span class="skill-pct">82%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Java</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.70"></div></div><span class="skill-pct">70%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">C#</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.65"></div></div><span class="skill-pct">65%</span></div>
+              </div>
+            </div>
+
+            <!-- SECURITY -->
+            <div class="skills-group">
+              <div class="skills-group-label">Cybersecurity &amp; Ethical Hacking</div>
+              <div class="skills-group-note">📚 Currently studying via EC-Council</div>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar"><span class="skill-bar-label">Network Security</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.38"></div></div><span class="skill-pct">38%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Ethical Hacking</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.33"></div></div><span class="skill-pct">33%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Footprinting &amp; Recon</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.40"></div></div><span class="skill-pct">40%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Vulnerability Analysis</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.35"></div></div><span class="skill-pct">35%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Social Engineering</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.32"></div></div><span class="skill-pct">32%</span></div>
+              </div>
+            </div>
+
+            <!-- DATA -->
+            <div class="skills-group">
+              <div class="skills-group-label">Data Science &amp; AI</div>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar"><span class="skill-bar-label">Data Analysis</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.72"></div></div><span class="skill-pct">72%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Machine Learning</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.62"></div></div><span class="skill-pct">62%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Microsoft SQL</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.68"></div></div><span class="skill-pct">68%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">SQLite</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.70"></div></div><span class="skill-pct">70%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">MongoDB</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.60"></div></div><span class="skill-pct">60%</span></div>
+              </div>
+            </div>
+
+            <!-- ENTERPRISE & TOOLS -->
+            <div class="skills-group">
+              <div class="skills-group-label">Enterprise &amp; Tools</div>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar"><span class="skill-bar-label">SAP</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.72"></div></div><span class="skill-pct">72%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">ArchiMate</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.70"></div></div><span class="skill-pct">70%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">ENSP (GNS3/EVE-NG)</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.65"></div></div><span class="skill-pct">65%</span></div>
+                <div class="skill-bar"><span class="skill-bar-label">Oracle VM</span><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.55"></div></div><span class="skill-pct">55%</span></div>
+              </div>
+            </div>
+
+            <!-- SOFT SKILLS -->
+            <div class="skills-group">
+              <div class="skills-group-label">Soft Skills</div>
+              <div class="soft-skills-grid">
+                <div class="soft-skill-chip">🧠 Critical Thinking</div>
+                <div class="soft-skill-chip">🎯 Problem Solving</div>
+                <div class="soft-skill-chip">💬 Communication</div>
+                <div class="soft-skill-chip">✍️ Writing</div>
+                <div class="soft-skill-chip">🤝 Collaboration</div>
+                <div class="soft-skill-chip">📐 Attention to Detail</div>
+                <div class="soft-skill-chip">⏱ Time Management</div>
+                <div class="soft-skill-chip">🔄 Adaptability</div>
+                <div class="soft-skill-chip">🌱 Self-directed Learning</div>
+                <div class="soft-skill-chip">🎨 Creative Thinking</div>
+                <div class="soft-skill-chip">📊 Analytical Mindset</div>
+              </div>
+            </div>
+
+          </div><!-- /skills-wrap -->
+
+          <!-- TIMELINE -->
+          <div class="reveal" data-delay="2">
+            <h3 style="margin-bottom:28px">Timeline</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2024 – Present</div>
+                <div class="timeline-title">Bachelor of Science in Information Technology</div>
+                <div class="timeline-place">University · Current enrollment</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2025 – Present</div>
+                <div class="timeline-title">EC-Council Ethical Hacking Certification</div>
+                <div class="timeline-place">CEH coursework · Network security &amp; penetration testing</div>
+              </div>
+<div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-title">Discovered UX Design &amp; Figma</div>
+                <div class="timeline-place">Online courses · First wireframes &amp; prototypes</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2022</div>
+                <div class="timeline-title">Started learning web development</div>
+                <div class="timeline-place">Self-taught · HTML, CSS, JavaScript</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2022 – 2024</div>
+                <div class="timeline-title">Senior High School · ICT Strand</div>
+                <div class="timeline-place">TVL Track · Graduated</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Schy. Learn. Build. Improve.</span>
+    <div class="footer-socials">
+      <a href="#" data-cursor="hover" aria-label="GitHub"   target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="WhatsApp"  target="_blank" rel="noopener"></a>
+      <a href="#" data-cursor="hover" aria-label="Instagram" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/global.js"></script>
+<script src="../js/social-icons.js"></script>
+<script src="../js/enhancements.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+    const w = parseFloat(bar.dataset.width || '0.75');
+    bar.style.width = (w * 100) + '%';
+  });
+});
+</script>
+</body>
+</html>
