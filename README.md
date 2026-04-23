@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Shy's Portfolio — Setup Guide
 
 A premium, self-contained portfolio website. No build step required for the core HTML/CSS/JS version. Just open in a browser or deploy to any static host.
@@ -110,3 +111,7 @@ Edit CSS variables in `css/main.css` `:root {}` block:
 ---
 
 Built with HTML, CSS & vanilla JS. No frameworks, no build step, no lock-in. ✨
+=======
+# schy-portfolio
+Personal portfolio website showcasing my projects, skills, and experience as a developer.
+>>>>>>> 785d41165ff07ddc5b81cef816b4130f18a287e6
