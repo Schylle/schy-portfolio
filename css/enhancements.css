@@ -426,7 +426,7 @@
 .play-card-title { font-size: 0.92rem; font-weight: 600; margin-bottom: 2px; }
 .play-card-desc  { font-size: 0.78rem; color: var(--fg-muted); }
 
-/* Experiment 1 — colour orb */
+/* Experiment 1 — color orb */
 .play-orb-demo {
   width: 100px; height: 100px;
   border-radius: 50%;
@@ -482,6 +482,20 @@
   .playground-grid { grid-template-columns: 1fr; }
 }
 
+/* ─── G. TYPOGRAPHY REFINEMENT ─────────────────────────────────── */
+.about-story p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8; 
+  margin-bottom: 1.5rem;
+  max-width: 70ch;
+}
+
+/* Make the "Resilience" statement stand out */
+.about-story p strong:last-of-type {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--glow);
+}
 /* ─── CAPSTONE BADGE variant ──────────────────────────────────────── */
 .project-wip-badge.capstone-badge {
   background: oklch(0.60 0.18 140 / 0.2);
