@@ -13,23 +13,21 @@
 </head>
 <body>
 
-<!-- ── CUSTOM CURSOR ─────────────────────────────────────────────────── -->
+<!-- CUSTOM CURSOR -->
 <div id="cursor-orb"></div>
 <div id="cursor-trail"></div>
 
-<!-- ── PAGE TRANSITION ───────────────────────────────────────────────── -->
+<!-- PAGE TRANSITION  -->
 <div id="page-transition"></div>
 
-<!-- ── AMBIENT ───────────────────────────────────────────────────────── -->
+<!-- AMBIENT -->
 <div id="starfield"></div>
 <div class="grid-bg"></div>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 <div class="orb orb-3"></div>
 
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-<!-- INTRO SCREEN — only shown on first load or when logo is clicked    -->
-<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- INTRO LAPTOP SCREEN  -->
 <div id="intro-screen" aria-hidden="false" role="dialog" aria-label="Portfolio intro">
 
   <button id="skip-intro" data-cursor="hover">Skip intro →</button>
@@ -68,11 +66,8 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-<!-- NAV                                                                 -->
-<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- NAV -->
 <nav>
-  <!-- Logo — click triggers intro. Brand logo with image. -->
   <a href="index.html" class="nav-logo nav-logo-img" id="nav-logo-btn" aria-label="schy.dev — home" data-cursor="hover">
     <span class="logo-placeholder" aria-hidden="true">
       <span class="logo-ph-box">
@@ -83,7 +78,6 @@
     </span>
   </a>
   <ul class="nav-links">
-    <!-- "Home" goes directly to home content, NOT through intro -->
     <li><a href="index.html" data-home-link>Home</a></li>
     <li><a href="pages/projects.html">Projects</a></li>
     <li><a href="pages/about.html">About</a></li>
@@ -96,12 +90,10 @@
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-<!-- HOME PAGE                                                           -->
-<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- HOME PAGE -->
 <div id="home-page" class="page">
 
-  <!-- ── HERO ─────────────────────────────────────────────────────── -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-video-wrap">
       <video id="hero-video" autoplay loop muted playsinline>
@@ -154,10 +146,9 @@
     </div>
   </section>
 
-  <!-- ── MARQUEE ───────────────────────────────────────────────────── -->
+  <!-- MARQUEE -->
   <div class="marquee-wrap reveal">
     <div class="marquee-track" aria-hidden="true">
-      <!-- Set 1 — real brand logos via Simple Icons CDN colors + SVG paths -->
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"> Figma</div>
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="React"> React</div>
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="Python"> Python</div>
@@ -170,7 +161,7 @@
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"> MySQL</div>
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"> MongoDB</div>
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind"> Tailwind CSS</div>
-      <!-- Set 2 — duplicate for seamless loop -->
+      <!-- For seamless loop -->
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"> Figma</div>
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="React"> React</div>
       <div class="marquee-item"><img class="mi-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="Python"> Python</div>
@@ -186,7 +177,7 @@
     </div>
   </div>
 
-  <!-- ── FOUR CRAFTS ───────────────────────────────────────────────── -->
+  <!-- FOUR CRAFTS -->
   <section>
     <div class="container">
       <span class="section-label reveal">What I do</span>
@@ -222,7 +213,7 @@
     </div>
   </section>
 
-  <!-- ── FEATURED PROJECTS STRIP ───────────────────────────────────── -->
+  <!-- FEATURED PROJECTS STRIP -->
   <section>
     <div class="container">
       <span class="section-label reveal">Selected Work</span>
@@ -262,7 +253,7 @@
     </div>
   </section>
 
-  <!-- ── PROCESS CAROUSEL ──────────────────────────────────────────── -->
+  <!-- PROCESS CAROUSEL -->
   <section class="process-section">
     <div class="container">
       <span class="section-label reveal">How I work</span>
@@ -310,7 +301,7 @@
     </div>
   </section>
 
-  <!-- ── TESTIMONIAL / QUOTE ────────────────────────────────────────── -->
+  <!-- QUOTE -->
   <section>
     <div class="container">
       <div class="quote-block glass reveal">
@@ -323,7 +314,7 @@
     </div>
   </section>
 
-  <!-- ══ A. SKILL RADAR CHART ════════════════════════════════════════ -->
+  <!-- SKILL RADAR CHART -->
   <section class="radar-section">
     <div class="container">
       <span class="section-label reveal">Skill Overview</span>
@@ -365,10 +356,7 @@
     </div>
   </section>
 
-  <!-- ══ B. NOW LEARNING (floating card — always visible on home) ════ -->
-  <!-- Floating card injected below, outside the flow -->
-
-  <!-- ══ C. TERMINAL / CTF WINDOW — Parrot OS style ══════════════════ -->
+  <!--TERMINAL / CTF WINDOW — Parrot OS style -->
   <section class="terminal-section">
     <div class="container">
       <span class="section-label reveal">Security Lab</span>
@@ -416,7 +404,7 @@
     </div>
   </section>
 
-  <!-- ══ D. CURRENT TOOLS WIDGET ══════════════════════════════════════ -->
+  <!-- CURRENT TOOLS WIDGET -->
   <section class="tools-ticker-section">
     <div class="container">
       <div class="tools-ticker-inner">
@@ -487,7 +475,7 @@
     </div>
   </section>
 
-  <!-- ══ F. PLAYGROUND — replaced with skills showcase cards ══════════ -->
+  <!-- WHAT I CREATE -->
   <section class="playground-section">
     <div class="container">
       <span class="section-label reveal">My Disciplines</span>
@@ -563,7 +551,7 @@
     </div>
   </section>
 
-  <!-- ══ CTA BAND ══════════════════════════════════════════════════════ -->
+  <!-- CTA BAND -->
   <section class="cta-band">
     <div class="cta-orb cta-orb-1" data-speed="0.2"></div>
     <div class="cta-orb cta-orb-2" data-speed="-0.15"></div>
@@ -577,7 +565,7 @@
 
 </div><!-- /home-page -->
 
-<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <span class="footer-copy">© 2026 Schy. Learn. Build. Improve.</span>
@@ -591,7 +579,7 @@
   </div>
 </footer>
 
-<!-- ══ B. NOW LEARNING — floating card ════════════════════════════════ -->
+<!-- NOW LEARNING — floating card at the bottom -->
 <div class="now-learning-card glass" id="now-learning-card" aria-label="Currently learning">
   <div class="now-learning-header">
     <span class="now-learning-label">Now Learning</span>

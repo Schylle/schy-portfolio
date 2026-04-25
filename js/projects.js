@@ -1,4 +1,3 @@
-/* projects.js */
 document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards      = document.querySelectorAll('.project-card');

@@ -1,4 +1,3 @@
-/* home.js */
 document.addEventListener('DOMContentLoaded', () => {
 
   const intro    = document.getElementById('intro-screen');
@@ -8,11 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const logoLink = document.getElementById('nav-logo-btn');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ─── INTRO LOGIC ────────────────────────────────────────────────────────
-  // On page load: intro IS shown, home is hidden behind it.
-  // Clicking laptop: zoom through → show home.
-  // Logo click (shy.dev text): re-show intro.
-
+  // INTRO LOGIC 
   function showHome(instant) {
     if (!intro) return;
     if (instant || reducedMotion) {
@@ -58,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Laptop click → v2 duration: 1.6s zoom, show home at 1.4s
+  // Laptop click
   if (laptop) {
     laptop.addEventListener('click', () => {
       if (laptop.classList.contains('zooming')) return;
@@ -75,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     skipBtn.addEventListener('click', () => showHome(false));
   }
 
-  // ─── CONSTELLATION (canvas) ─────────────────────────────────────────────
+  // CONSTELLATION (canvas)
   const cnv = document.getElementById('constellation-canvas');
   if (cnv) {
     const ctx = cnv.getContext('2d');
@@ -195,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─── PROCESS CAROUSEL ──────────────────────────────────────────────────
+  // PROCESS CAROUSEL
   const track   = document.querySelector('.process-track');
   const prevBtn = document.querySelector('.process-btn.prev');
   const nextBtn = document.querySelector('.process-btn.next');
@@ -216,11 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.addEventListener('click', () => { if(idx > 0){ idx--; update(); }});
   }
 
-  // ─── HERO VIDEO ────────────────────────────────────────────────────────
+  // HERO VIDEO
   const vid = document.getElementById('hero-video');
   if (vid) vid.play().catch(() => {});
 
-  // ─── FLOATING PARTICLES on hero ────────────────────────────────────────
+  // FLOATING PARTICLES on hero
   const heroSection = document.querySelector('.hero');
   if (heroSection) {
     for (let i = 0; i < 20; i++) {

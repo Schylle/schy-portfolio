@@ -1,14 +1,11 @@
-/* enhancements.js — 6 new interactive features */
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ═══════════════════════════════════════════════════════
-  // A. SKILL RADAR CHART
-  // ═══════════════════════════════════════════════════════
+  // SKILL RADAR CHART
   const radarCnv = document.getElementById('radar-canvas');
   if (radarCnv) {
     const ctx = radarCnv.getContext('2d');
     const dpr = window.devicePixelRatio || 1;
-    // Bigger canvas to avoid label clipping
+
     const SIZE = 500;
     radarCnv.width  = SIZE * dpr;
     radarCnv.height = SIZE * dpr;
@@ -28,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { label: 'Ent.', value: 0.70, color: '#28c841' },
     ];
     const N = AXES.length;
-    let animProg = 1;   // start completed so hover works from first render
+    let animProg = 1;  
     let hoveredIdx = -1;
     let animId;
 
@@ -37,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function drawRadar(progress) {
       ctx.clearRect(0, 0, SIZE, SIZE);
 
-      // ── rings ──────────────────────────────────────────────────────
+      // rings 
       for (let ring = 1; ring <= 5; ring++) {
         const r = (ring / 5) * R;
         ctx.beginPath();
@@ -58,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillText((ring * 20) + '%', cx, cy - r + 1);
       }
 
-      // ── spokes ─────────────────────────────────────────────────────
+      // spoke
       AXES.forEach((ax, i) => {
         const a = angleOf(i);
         const isHov = (i === hoveredIdx);
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.stroke();
       });
 
-      // ── filled area (with per-axis highlight) ─────────────────────
+      // filled area (with per-axis highlight)
       // Draw a subtle highlight wedge for hovered axis using arc
       if (hoveredIdx >= 0 && progress >= 1) {
         const hax = AXES[hoveredIdx];
@@ -93,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.stroke();
       }
 
-      // ── main filled shape ─────────────────────────────────────────
+      // main filled shape
       ctx.beginPath();
       AXES.forEach((ax, i) => {
         const a = angleOf(i);
@@ -111,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.lineWidth = hoveredIdx >= 0 ? 2.5 : 2;
       ctx.stroke();
 
-      // ── dots + labels ─────────────────────────────────────────────
+      // dots + labels 
       AXES.forEach((ax, i) => {
         const a = angleOf(i);
         const r = ax.value * R * progress;
@@ -134,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fill();
         ctx.shadowBlur = 0;
 
-        // axis label — positioned further out with generous padding
+        // axis label 
         const lx = cx + Math.cos(a) * (R + LPAD);
         const ly = cy + Math.sin(a) * (R + LPAD);
         const cos = Math.cos(a), sin = Math.sin(a);
@@ -146,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // ── animate on scroll into view ──────────────────────────────────
+    // animate on scroll into view 
     const radarIO = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
@@ -167,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     radarIO.observe(radarCnv);
     drawRadar(1);
 
-    // ── legend hover → highlight canvas axis ─────────────────────────
+    // legend hover → highlight canvas axis
     const legendItems = document.querySelectorAll('.radar-legend-item');
     legendItems.forEach((item, i) => {
       item.addEventListener('mouseenter', () => {
@@ -186,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // ── canvas mouse move: highlight nearest axis ─────────────────────
+    // canvas mouse move: highlight nearest axis
     radarCnv.addEventListener('mousemove', e => {
       const rect = radarCnv.getBoundingClientRect();
       const mx = (e.clientX - rect.left) * (SIZE / rect.width);
@@ -225,9 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     radarCnv.style.cursor = 'crosshair';
   }
 
-  // ═══════════════════════════════════════════════════════
-  // B. NOW LEARNING CARD
-  // ═══════════════════════════════════════════════════════
+  // NOW LEARNING CARD
   const nlCard = document.getElementById('now-learning-card');
   const nlClose = document.getElementById('nl-close');
   const nlShow  = document.getElementById('now-learning-show');
@@ -251,9 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ═══════════════════════════════════════════════════════
-  // C. TERMINAL TYPER — animate lines into view
-  // ═══════════════════════════════════════════════════════
+  // TERMINAL TYPER — animate lines into view
   const terminalBody = document.querySelector('.terminal-body');
   if (terminalBody) {
     const lines = terminalBody.querySelectorAll('.t-line.typed');
@@ -274,10 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (terminalBody.closest) termIO.observe(terminalBody);
   }
 
-  // ═══════════════════════════════════════════════════════
-  // D. TOOLS WIDGET — hover tooltips already via CSS
-  //    This just adds subtle random pulse to active tools
-  // ═══════════════════════════════════════════════════════
+  // TOOLS WIDGET — hover tooltips already via CSS
   const activeTools = document.querySelectorAll('.tool-chip.active-tool');
   activeTools.forEach((chip, i) => {
     setInterval(() => {
@@ -286,11 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000 + i * 700);
   });
 
-  // ═══════════════════════════════════════════════════════
-  // E. TIMELINE — animated dot pulse on scroll
-  // ═══════════════════════════════════════════════════════
-  // The ::before CSS line is already drawn. We just add a
-  // scroll-driven reveal for each item staggered.
+  // TIMELINE — animated dot pulse on scroll
   const timelineItems = document.querySelectorAll('.timeline-item');
   if (timelineItems.length) {
     const tlIO = new IntersectionObserver(entries => {
@@ -307,9 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ═══════════════════════════════════════════════════════
-  // F. MATRIX RAIN (playground experiment 3)
-  // ═══════════════════════════════════════════════════════
+  // MATRIX RAIN (playground experiment 3)
   const matrixCnv = document.getElementById('matrix-canvas');
   if (matrixCnv) {
     const mCtx = matrixCnv.getContext('2d');
@@ -367,9 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (matrixCard) mIO.observe(matrixCard);
   }
 
-  // ═══════════════════════════════════════════════════════
-  // COLOUR ORB PLAYGROUND — interactive mouse track
-  // ═══════════════════════════════════════════════════════
+  // COLOUR ORB ON WHAT I CREATE — interactive mouse track
   const orbDemo = document.querySelector('.play-orb-demo');
   if (orbDemo) {
     const parent = orbDemo.closest('.play-card-canvas');

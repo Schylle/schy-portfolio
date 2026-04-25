@@ -1,10 +1,9 @@
-/* contact.js */
 document.addEventListener('DOMContentLoaded', () => {
   const form   = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   if (!form || !status) return;
 
-  // ── Character counter for message ────────────────────────────────────
+  // Character counter for message
   const msgArea   = form.querySelector('#message');
   const charCount = form.querySelector('#char-count');
   if (msgArea && charCount) {
@@ -13,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Basic client-side validation ─────────────────────────────────────
+  // Basic client-side validation 
   function validate() {
     const name  = form.querySelector('#name').value.trim();
     const email = form.querySelector('#email').value.trim();
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       : 'Send Message <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0-5.25-5.25M19.5 12l-5.25 5.25"/></svg>';
   }
 
-  // ── Submit handler ────────────────────────────────────────────────────
+  // Submit handler
   form.addEventListener('submit', async e => {
     e.preventDefault();
     status.style.display = 'none';
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message: form.querySelector('#message').value.trim(),
     };
 
-    // ── If no action URL is set, show setup instructions ────────────────
+    // If no action URL is set, show setup instructions 
     if (!ACTION) {
       await new Promise(r => setTimeout(r, 800)); // simulate delay
       setLoading(false);
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // ── Send to Formspree (or any JSON-accepting endpoint) ───────────────
+    // ── Send to Formspree (or any JSON-accepting endpoint)
     try {
       const res = await fetch(ACTION, {
         method:  'POST',
@@ -101,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ── Real-time field validation on blur ────────────────────────────────
+  // Real-time field validation on blur 
   form.querySelectorAll('input, textarea').forEach(field => {
     field.addEventListener('blur', () => {
       field.style.borderColor = '';

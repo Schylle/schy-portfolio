@@ -1,7 +1,7 @@
-/* cert-lightbox.js — click any cert image to view full screen */
+// For every cert image to view full screen 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Create the lightbox element once
+  // Lightbox element 
   const lb = document.createElement('div');
   lb.className = 'cert-lightbox';
   lb.innerHTML = `
@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { lbImg.src = ''; }, 300);
   }
 
-  // Attach click to every cert-img-slot that has a real image
+  // Attach click to every cert-img-slot
   document.querySelectorAll('.cert-img-slot').forEach(slot => {
     const img = slot.querySelector('img');
-    if (!img) return; // placeholder, no image yet
+    if (!img) return; // placeholder
 
     slot.addEventListener('click', () => {
       openLightbox(img.src, img.alt);

@@ -1,6 +1,4 @@
-/* global.js — shared across all pages */
-
-// ─── THEME (runs immediately before DOMContentLoaded) ─────────────────────
+// THEME 
 (function () {
   const stored = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', stored);
@@ -8,7 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ─── THEME TOGGLE ──────────────────────────────────────────────────────
+  // THEME TOGGLE
   const toggle = document.getElementById('theme-toggle');
   if (toggle) {
     const updateIcon = () => {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─── CURSOR ────────────────────────────────────────────────────────────
+  // CURSOR 
   const orb   = document.getElementById('cursor-orb');
   const trail = document.getElementById('cursor-trail');
   if (orb && window.matchMedia('(pointer: fine)').matches) {
@@ -53,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─── STARFIELD ────────────────────────────────────────────────────────
+  // STARFIELD 
   const starfield = document.getElementById('starfield');
   if (starfield) {
     for (let i = 0; i < 140; i++) {
@@ -69,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ─── SCROLL REVEAL (re-triggers on scroll up too) ─────────────────────
+  // SCROLL REVEAL (re-triggers on scroll up too)
   const reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {
     const io = new IntersectionObserver(entries => {
@@ -81,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => io.observe(el));
   }
 
-  // ─── PARALLAX ─────────────────────────────────────────────────────────
+  // PARALLAX
   const parallaxEls = document.querySelectorAll('[data-speed]');
   if (parallaxEls.length) {
     window.addEventListener('scroll', () => {
@@ -93,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // ─── NAV SCROLL CLASS ─────────────────────────────────────────────────
+  // NAV SCROLL CLASS
   const nav = document.querySelector('nav');
   if (nav) {
     window.addEventListener('scroll', () => {
@@ -101,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // ─── MOBILE NAV ───────────────────────────────────────────────────────
+  // MOBILE NAV
   const navToggle = document.getElementById('nav-toggle');
   const navLinks  = document.querySelector('.nav-links');
   if (navToggle && navLinks) {
@@ -111,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─── ACTIVE NAV LINK ──────────────────────────────────────────────────
+  // ACTIVE NAV LINK
   const currentFile = (window.location.pathname.split('/').pop() || 'index.html').replace(/\?.*$/, '');
 
   document.querySelectorAll('.nav-links a').forEach(a => {
@@ -122,13 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     else          a.classList.remove('active');
   });
 
-  // ─── PAGE TRANSITION + HOME NAV FIX ───────────────────────────────────
+  // PAGE TRANSITION 
   const overlay = document.getElementById('page-transition');
-
-  // "Home" nav link behaviour:
-  // - On the home page itself (index.html): skip intro, scroll to hero section
-  // - On other pages: normal transition to index.html (no intro shown)
-  //   We achieve this by linking to index.html#main which we handle on load
   document.querySelectorAll('.nav-links a[href*="index.html"], .nav-links a[href="./"]').forEach(a => {
     if (currentFile === 'index.html' || currentFile === '') {
       // Already on home page — skip intro, scroll to home content
@@ -143,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-    // else: let normal page transition handle it (goes to index.html which shows home directly)
   });
 
   if (overlay) {
@@ -164,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('pageshow', () => overlay.classList.remove('visible'));
   }
 
-  // ─── TILT CARDS ───────────────────────────────────────────────────────
+  // TILT CARDS
   document.querySelectorAll('.tilt-card, .craft-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r  = card.getBoundingClientRect();
@@ -177,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
 
-  // ─── SKILL BARS ────────────────────────────────────────────────────────
+  // SKILL BARS
   const bars = document.querySelectorAll('.skill-bar-fill');
   if (bars.length) {
     const barIO = new IntersectionObserver(entries => {
@@ -186,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bars.forEach(b => barIO.observe(b));
   }
 
-  // ─── ANIMATED COUNTER (hero stats) ────────────────────────────────────
+  // ANIMATED COUNTER (hero stats)
   const statNums = document.querySelectorAll('.hero-stat-n');
   if (statNums.length) {
     const cIO = new IntersectionObserver(entries => {

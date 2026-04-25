@@ -1,4 +1,4 @@
-/* ─── PAGE HEADER ────────────────────────────────────────────────────── */
+/* PAGE HEADER */
 .page-header {
   padding: 140px 0 80px;
   position: relative;
@@ -8,7 +8,7 @@
 .page-header h1 { margin-bottom: 16px; }
 .page-header p { color: var(--fg-muted); font-size: 1.1rem; }
 
-/* ─── PROJECTS ───────────────────────────────────────────────────────── */
+/* PROJECTS */
 .filters {
   display: flex;
   gap: 10px;
@@ -155,7 +155,7 @@
   display: none;
 }
 
-/* ─── ABOUT ──────────────────────────────────────────────────────────── */
+/* ABOUT */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -314,7 +314,7 @@
   .about-left { position: static; }
 }
 
-/* ─── CERTIFICATES ───────────────────────────────────────────────────── */
+/* CERTIFICATES */
 .school-section { margin-bottom: 64px; }
 .school-header {
   display: flex;
@@ -461,7 +461,7 @@
   position: relative;
   z-index: 1;
 }
-/* When a real image exists, hide the hint overlay */
+/* When a real image loaded, hide the hint overlay */
 .cert-img-slot:has(img) .cert-img-hint { display: none; }
 .cert-img-slot img {
   position: absolute !important;
@@ -486,7 +486,7 @@
 .cert-title { font-size: 0.95rem; margin-bottom: 6px; color: var(--fg); }
 .cert-date { font-size: 0.8rem; color: var(--fg-muted); }
 
-/* ─── CONTACT ────────────────────────────────────────────────────────── */
+/* CONTACT */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -621,7 +621,7 @@ textarea { resize: vertical; min-height: 130px; }
   color: oklch(0.70 0.20 30);
 }
 
-/* ─── PROJECT CARD IMPROVEMENTS ─────────────────────────────────────── */
+/* PROJECT CARD IMPROVEMENTS */
 .project-card {
   overflow: hidden;
   cursor: none;
@@ -752,7 +752,7 @@ textarea { resize: vertical; min-height: 130px; }
   border-color: oklch(0.78 0.03 250);
   color: oklch(0.12 0.03 250);
 }
-/* ─── CONTACT SETUP NOTE ────────────────────────────────────────────── */
+/* CONTACT SETUP NOTE */
 .contact-setup-note {
   padding: 18px 20px;
   border-radius: var(--radius);
@@ -773,7 +773,7 @@ textarea { resize: vertical; min-height: 130px; }
   color: var(--accent);
 }
 
-/* ─── CERT STATS ROW ─────────────────────────────────────────────────── */
+/* CERT STATS ROW */
 .cert-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -812,7 +812,7 @@ textarea { resize: vertical; min-height: 130px; }
   .cert-stats { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ─── SOFT SKILLS GRID ───────────────────────────────────────────────── */
+/* SOFT SKILLS GRID */
 .soft-skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -841,7 +841,7 @@ textarea { resize: vertical; min-height: 130px; }
   transform: translateY(-2px);
 }
 
-/* Skills group note (e.g. "Currently studying") */
+/* Skills group note */
 .skills-group-note {
   font-size: 0.76rem;
   color: var(--accent);
@@ -853,7 +853,7 @@ textarea { resize: vertical; min-height: 130px; }
   display: inline-block;
 }
 
-/* ─── ABOUT FACT PILLS ───────────────────────────────────────────────── */
+/* ABOUT FACT */
 .about-facts {
   padding: 20px;
   border-radius: var(--radius);
@@ -880,7 +880,7 @@ textarea { resize: vertical; min-height: 130px; }
   text-align: right;
 }
 
-/* ─── SPINNER ─────────────────────────────────────────────────────────── */
+/* SPINNER */
 .spinner {
   display: inline-block;
   width: 14px; height: 14px;
@@ -905,7 +905,7 @@ textarea { resize: vertical; min-height: 130px; }
   .form-row { grid-template-columns: 1fr; }
 }
 
-/* ─── ICON-ONLY SOCIAL BUTTONS (contact page) ───────────────────── */
+/* ICON-ONLY SOCIAL BUTTONS (contact page) */
 .social-btn-icon {
   width: 48px;
   height: 48px;
@@ -921,7 +921,7 @@ textarea { resize: vertical; min-height: 130px; }
   height: 22px;
 }
 
-/* ─── LIGHT MODE PROJECT BODY TEXT ──────────────────────────────────── */
+/* LIGHT MODE PROJECT BODY TEXT */
 [data-theme="light"] .project-body { background: transparent; }
 [data-theme="light"] .project-title { color: oklch(0.12 0.04 250) !important; }
 [data-theme="light"] .project-desc  { color: oklch(0.38 0.04 250) !important; }

@@ -1,8 +1,4 @@
-/* ═══════════════════════════════════════════════════════════════
-   ENHANCEMENTS.CSS — 6 new portfolio features
-   ═══════════════════════════════════════════════════════════════ */
-
-/* ─── PARROT OS TERMINAL OVERRIDES ──────────────────────────────── */
+/* PARROT OS TERMINAL OVERRIDES */
 .parrot-bar {
   background: oklch(0.10 0.03 250) !important;
   border-bottom-color: oklch(0.20 0.05 250) !important;
@@ -13,7 +9,7 @@
 .t-parrot-user { color: #7ec8e3; font-weight: 600; display: block; }
 .t-parrot-arrow { color: #15e0ed; font-weight: 700; }
 
-/* ─── A. SKILL RADAR CHART ──────────────────────────────────────── */
+/* SKILL RADAR CHART */
 .radar-section { padding: 100px 0; }
 .radar-wrap {
   display: grid;
@@ -84,7 +80,7 @@
   #radar-canvas { max-width: 300px; }
 }
 
-/* ─── B. NOW LEARNING CARD ──────────────────────────────────────── */
+/* NOW LEARNING CARD */
 .now-learning-card {
   position: fixed;
   bottom: 28px;
@@ -196,7 +192,7 @@
   .now-learning-card { width: calc(100vw - 32px); right: 16px; bottom: 16px; }
 }
 
-/* ─── C. TERMINAL / CTF SECTION ─────────────────────────────────── */
+/* TERMINAL / CTF SECTION */
 .terminal-section { padding: 100px 0; }
 .terminal-wrap {
   margin-top: 48px;
@@ -285,7 +281,7 @@
   to   { max-width: 100%; }
 }
 
-/* ─── D. CURRENT TOOLS WIDGET (home page floating stack) ───────── */
+/* CURRENT TOOLS WIDGET (home page floating stack) */
 .tools-ticker-section { padding: 80px 0; }
 .tools-ticker-inner {
   display: grid;
@@ -355,7 +351,7 @@
   .tools-ticker-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* ─── E. TIMELINE SVG DRAW ANIMATION ───────────────────────────── */
+/* TIMELINE SVG DRAW ANIMATION */
 /* Applied to .timeline on about page */
 .timeline-line-svg {
   position: absolute;
@@ -384,7 +380,7 @@
   box-shadow: 0 0 20px var(--accent);
 }
 
-/* ─── F. PLAYGROUND SECTION ─────────────────────────────────────── */
+/* WHAT I CREATE SECTION */
 .playground-section { padding: 100px 0; }
 .playground-grid {
   display: grid;
@@ -426,7 +422,7 @@
 .play-card-title { font-size: 0.92rem; font-weight: 600; margin-bottom: 2px; }
 .play-card-desc  { font-size: 0.78rem; color: var(--fg-muted); }
 
-/* Experiment 1 — color orb */
+/* color orb */
 .play-orb-demo {
   width: 100px; height: 100px;
   border-radius: 50%;
@@ -440,7 +436,7 @@
   box-shadow: 0 0 60px var(--glow), 0 0 120px var(--glow);
 }
 
-/* Experiment 2 — CSS wave */
+/* CSS wave */
 .play-wave-demo {
   width: 100%;
   height: 100%;
@@ -466,7 +462,7 @@
   to   { transform: translateX(0%) rotate(360deg); }
 }
 
-/* Experiment 3 — matrix rain (canvas-driven) */
+/* matrix rain (canvas-driven) */
 #matrix-canvas {
   width: 100%;
   height: 100%;
@@ -482,7 +478,7 @@
   .playground-grid { grid-template-columns: 1fr; }
 }
 
-/* ─── G. TYPOGRAPHY REFINEMENT ─────────────────────────────────── */
+/* TYPOGRAPHY REFINEMENT */
 .about-story p {
   text-align: justify;
   text-justify: inter-word;
@@ -491,12 +487,12 @@
   max-width: 70ch;
 }
 
-/* Make the "Resilience" statement stand out */
+/* Make the the strong part in about description stand out */
 .about-story p strong:last-of-type {
   color: var(--accent);
   text-shadow: 0 0 10px var(--glow);
 }
-/* ─── CAPSTONE BADGE variant ──────────────────────────────────────── */
+/* CAPSTONE BADGE variant */
 .project-wip-badge.capstone-badge {
   background: oklch(0.60 0.18 140 / 0.2);
   border-color: oklch(0.60 0.18 140 / 0.45);

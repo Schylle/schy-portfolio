@@ -1,4 +1,4 @@
-/* ─── INTRO SCREEN ───────────────────────────────────────────────────── */
+/* INTRO SCREEN */
 #intro-screen {
   position: fixed;
   inset: 0;
@@ -230,7 +230,7 @@
   to { opacity: 0; pointer-events: none; }
 }
 
-/* ─── HERO ───────────────────────────────────────────────────────────── */
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -292,7 +292,6 @@
   gap: 32px;
   flex-wrap: wrap;
 }
-.hero-stat {}
 .hero-stat-n {
   font-family: var(--font-head);
   font-size: 2rem;
@@ -306,7 +305,7 @@
   margin-top: 2px;
 }
 
-/* ─── CONSTELLATION ──────────────────────────────────────────────────── */
+/* CONSTELLATION */
 #constellation-canvas {
   width: 100%;
   aspect-ratio: 1;
@@ -317,7 +316,7 @@
 }
 #constellation-canvas:active { cursor: grabbing; }
 
-/* ─── CRAFTS SECTION ─────────────────────────────────────────────────── */
+/* CRAFTS SECTION */
 .crafts-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -369,7 +368,7 @@
 }
 .craft-card:hover .craft-glow { opacity: 0.15; }
 
-/* ─── PROCESS ────────────────────────────────────────────────────────── */
+/* PROCESS */
 .process-section { padding: 100px 0; }
 .process-carousel {
   overflow: hidden;
@@ -415,7 +414,7 @@
 }
 .process-btn:hover { background: var(--primary); border-color: var(--primary); }
 
-/* ─── CTA BAND ───────────────────────────────────────────────────────── */
+/* CTA BAND */
 .cta-band {
   position: relative;
   padding: 120px 0;
@@ -454,7 +453,7 @@
 }
 .cta-band .btn { position: relative; }
 
-/* ─── LIGHT MODE OVERRIDES FOR INTRO / HOME ─────────────────────────── */
+/* LIGHT MODE OVERRIDES FOR INTRO / HOME */
 [data-theme="light"] #intro-screen {
   background: oklch(0.92 0.015 250);
 }
@@ -516,7 +515,7 @@
     transparent 70%
   );
 }
-/* ─── FEATURED PROJECTS STRIP ────────────────────────────────────────── */
+/* FEATURED PROJECTS STRIP */
 .featured-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -564,7 +563,7 @@
 }
 .featured-arrow:hover { transform: scale(1.15) rotate(15deg); box-shadow: 0 0 30px var(--glow); }
 
-/* ─── QUOTE BLOCK ────────────────────────────────────────────────────── */
+/* QUOTE BLOCK */
 .quote-block {
   padding: 48px 56px;
   position: relative;
@@ -610,7 +609,7 @@
   .quote-block { padding: 32px 24px; }
 }
 
-/* ─── HERO PARTICLE animation ────────────────────────────────────────── */
+/* HERO PARTICLE animation */
 @keyframes heroParticle {
   from { transform: translate(0, 0) scale(1); }
   to   { transform: translate(30px, -50px) scale(1.5); }
